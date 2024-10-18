@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Numeros en java</title>
+        <link rel="stylesheet" href="./css/stylmate.css">
+        <link rel="website icon" type="png" href="">
+
+    </head>
+    <body>
+        <ul class="pag">
+            <il><a href="./index.html" target="_blank" rel="noopener noreferrer">index</a></il>
+            <il><a href="./mecanicavariable.html" target="_blank" rel="noopener noreferrer">variables</a></il>
+            <il><a href="./matematica.html" target="_blank" rel="noopener noreferrer">Matematica</a></il>
+            <il><a href="./nuemros_hexagesimales.html" target="_blank" rel="noopener noreferrer">nuemros hexagesimales</a></il>
+
+        </ul>
+
+        <div id="sala1">
+            <h1>Pagina de numeracion con JavaScript</h1>
+            <p>Ejercicios basicos de aritmetica-numerica en script</p>
+            <p>post: en un mismo scrip da error si repito varibles...
+            mas bien en todos los script de la pagina aplica.</p>
+
+           <p>En los nuemros naturales, se escriben de forma normal</p> 
+
+
+
+           para facilitar la escritura de numeros extragrandes o pequenos
+            es posible usar la notacion cinetifica, agregando exponentes.   
+
+           <p id="exponencial"></p>
+           <p id="exponenciales"></p>
+           <script>
+            let q=12e4;
+            document.getElementById("exponencial").innerHTML= "12e4 ="+ q;
+
+            let w=12e-4;
+            document.getElementById("exponenciales").innerHTML= "12e-4 ="+ w;
+           </script>
+
+           ahora hablemos de la exactitud de los nuemrosen Js, tiene una exactitud de 
+           15 digitos, al numero 16 pues ya se elevan. Provemos con numeros menores y mayores.
+
+           <p id="15d"></p>
+           <p id="dci"></p>
+           <p id="dfg"></p>
+
+           al parecer solo funciona con una sucecion racional de numeros que eleven a su 
+           predecesor;
+           <p id="15d2"></p>
+
+           <script>
+            let e=999999999999999;
+            document.getElementById("15d").innerHTML= "999999999999999=" + e;
+
+            let r=4444444444444444;
+            document.getElementById("dci").innerHTML= "4444444444444444= "+ r;
+
+            let t=4444444444444445;
+            document.getElementById("dfg").innerHTML= "4444444444444445= "+ t;
+
+            let y=9999999999999999;
+            document.getElementById("15d2").innerHTML= "9999999999999999=" + y;
+           </script>
+            
+
+            probemos ahora con los decimales:
+           <p id="demo1"></p>
+
+           y se supone que para arreglar este decimal para que solo presente 1 decimal
+           se hace de la siguiente forma:
+           <p id="demo2"></p>
+            <script>
+                let u= 0.2 + 0.1;
+                document.getElementById("demo1").innerHTML="0.2+0.1= "+ u;
+                let i=(0.2*10+0.1*10)/10;
+                document.getElementById("demo2").innerHTML= "(0.2*10+0.1*10)/10= "+i;
+            </script>
+
+            al parecer en Js no se suman strings con numeros;
+            <p></p>
+            si sumamos cademas obtenemos cadenas
+            <p id="c1"></p>
+            numeros mas cadenas
+            <p id="c2"></p>
+
+            un error que al parecer se da es el de colocar en la impresion del documento
+            con el script el signo de suma +, no es un operador, mas bien es agregador
+            o posicionador...
+            <p id="c3"></p>
+
+            y algo mas que sucede, es que en las formulas aritmeticas al juntar cadenas y numeros
+            solo los numeros se ejecutan en la formula mientras que la cadena solo se sobreescribe.
+            <p id="c4"></p>
+            <p id="c5"></p>
+            raro no? pues asi es, si hay cadena en medio de numeros la operacion solo
+            se imprime, mientras que si es operacion y se le suma una cadena, se realiza la 
+            operacion y se agrega la cadena.
+            <script>
+                let o= "12";
+                let op= "12";
+                let sd= o+op;
+
+                document.getElementById("c1").innerHTML= "'12' + '12'="+ sd;
+
+                let or= 12;
+                let opr= "12";
+                let sdr= or+opr;
+
+                document.getElementById("c2").innerHTML= "12 + '12'="+ sdr;
+
+                let orn= 12;
+                let oprn= 12;
+                
+
+                document.getElementById("c3").innerHTML= "al colocar x + y="+ orn + oprn;
+
+                let g= 43;
+                let h= "12";
+                let l=24;
+                let result= g+l+h;
+                let result2= g+h+l;
+
+                document.getElementById("c4").innerHTML= "43+24+'12'="+result;
+                document.getElementById("c5").innerHTML= "43+'12'+24="+result2;
+            </script>
+
+            <p>esto se da porque el operador + es un concatenador, es decir Js 
+                identifica si los valores son numeros o strings, ya que dependiendo de 
+                eso lo suma o lo concatena, por eso si aplicamos las otras operaciones aritmeticas -,/,*
+                toma las cadenas y las convierte en numeros, y ejecuta la operacionpero en el caso de 
+                la suma depende... nuemros y cadenas juntas concatena, numeros solos los opera.
+            </p>
+
+            hablemos del NaN, se imprime eso cuando operamos numeros con cadenas que no contienen
+            nuemro y son cadenas de palanbras, con operandores que no sean el de suma +.
+            12/apple= nan
+            <p id="fd"></p>
+
+            pero si la cadena es un un nuemro ya se sabe que JS dejara que se opere 
+            como aritmetica.
+            <p></p>
+            el isNaN, es un avlor universal en JS que te indica si es o no un numero
+            <P id="numm"></P>
+            tal parece que si es un nuemro, imprime el numero pero si es 
+            una cadena imprime true
+            <p id="app"></p>
+
+            
+
+            <script>
+                
+                //voy a declarar estas dos variables para usarlas en operacione y no escribir tanto
+                let num=12;
+                let ap="apple";
+
+                let usonan= num / ap;
+
+                document.getElementById("fd").innerHTML= usonan;
+
+                isNaN(num)
+                isNaN(ap)
+                document.getElementById("numm").innerHTML=num + isNaN(num);
+                document.getElementById("app").innerHTML=ap +" "+ isNaN(ap);
+
+                
+            </script>
+
+            <p>Infinity; es el valor que se imprime cuando se exceda la capacidad 
+                numerica de JS, esto se puede ver mayormente en bucles infinitos o de 
+                valores muy altos por lo que entiendo.
+            </p>
+
+            <br>
+            probemos con la divicion con ceros, se supone que tambien da como resultado infinity
+                        
+            <p id="cero"></p>
+
+            <script>
+                let b=2;
+                let m=0;
+
+                let ho=b/m;
+                document.getElementById("cero").innerHTML=ho;
+
+            </script>
+
+            <!-- posdata este truco lo aprendi un dia despues de la practica anterior -->
+            <!-- ya se como convertir string a number -->
+            <br>
+            <p>
+            ahora para arreglar el concatenado de cadenal y numbers + strings usamos el 
+            number() o tambien el parseFloat() en la operacion y pasamos de string a number 
+            cualquier cadena numerica...</p>
+                la formula es esta: convert= number("24") + 24;
+            <p id="jkl"></p>
+
+            <script>
+                let hjd= "24";
+                let nuj= 24;
+
+                let convert= Number(hjd) + 24;
+                document.getElementById("jkl").innerHTML=convert;
+            </script>
+
+            
+
+        </div>
+    </body>
+</html>

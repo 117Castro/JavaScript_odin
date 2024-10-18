@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tipos de datos</title>
+        <link rel="stylesheet" href="./css/styldatos.css">
+        <link rel="website icon"    type="png" href="">
+
+    </head>
+
+    <body>
+        <ul class="pag">
+            <il><a href="./index.html" target="_blank" rel="noopener noreferrer">Index principal</a></il>
+            <il><a href="./metodosJS.html" target="_blank" rel="noopener noreferrer">Metodos de cadena</a></il>
+            <il><a href="./metodos_condicionales.html" target="_blank" rel="noopener noreferrer">Metodos condicionales</a></il>
+
+
+        </ul>
+        <div id="sala1">
+            <h1>Prueba de tipos de datos y sus condicionales</h1>
+            <p>Ejercicios con condicionales</p>
+            <p>post: los errores ortograficos es lo de menos solo quiero esta 
+                web para tener referencia de ejercicios para refrescar la memoria y tener la informacion 
+                mucho mas accesible.
+            </p>
+        
+        en JS encontramos 8 tipos de "datos" muy importante recordar esto, ya que las variables no estan 
+        ligados a los datos asignados pq esta la reasignacion por un lado.
+
+        <br>
+        <br>
+        <p>||||Number</p>
+        el tipo numerioco es el dato que contiene numeros enteros decimales, binarios, el tostring(binario) .tofixed(punto flotante)
+        para hacer corto el cuento, tambien esta los string tomados como forma numerica, ejemplo de esto \
+        esta el resultado NaN y el infinity, que es cuando no resulta una operacion matematica o tiene un resultado infinito como el 
+        dividir entre "0". <br>
+
+        <p>||||El dato Bigint</p>
+        Ya lo vimos antes, y concluimos que este tipo de datos es poco usado, mayormente
+        es usado por los ciptografos al parecer, el Bigint es el tipo de dato numerioco que exede los numeros 
+        que es posible almacenar en el tipo "number", se escala a numeros espnenciados a "10"
+        o inclusibe mayores, eso si para que un dato sea bigint se debe colocar una "n"al final de el numero.
+        <br><br>un ejemplo de esl uso del Bigint seria asi: <br>
+        let Bigint= 90875643128735648363846348438n; // este tipo de dato permitira imprimir el numero ya escrito
+        
+        <p id="big"></p>
+        en cambio si lo hacemos con el tipo number imprimira algo diferente: let Biggint=90875643128735648363846348438;//
+        dado que el limitre de number es de 15 digitos para su exactitud imprime numeros en distinto tipo de numeracion.
+        <p id="numb"></p>
+        <script>
+            let Bigint=90875643128735648363846348438n;
+            let Biggint=90875643128735648363846348438;
+
+            document.getElementById("big").innerHTML= Bigint;
+            document.getElementById("numb").innerHTML= Biggint;
+
+        </script>
+    
+
+        <p>||||||Cadena "string"</p>
+        en el caso de las cadenas, supongo que es el tipo de dato mas sencillo e entender
+        pero hay 3 tipos de comillas   en JS:
+        <br>
+        <br>
+        comilla doble: ""<br>
+        comilla simple: ''<br>
+        comilla invertida: ``<br>
+
+        las comillas dobles y simples imprimen en forma de estring lo que escriba dentro de 
+        estas, pero las comillas invertidas, permiten usar ${...} para meter dentro de las 
+        llaves cualquier cosa sean variables o formulas, esta es la ventaja de las 
+        comillas inveridas. <br>
+        un ejemplo  <br>
+
+        let gol="Messi ";
+        console.log(`gol ${24 + 2}`)// Messi 26, imprimira la formula ya resuelta y tambien la string.
+        Es facinante.
+
+        <br>
+
+        <p>|||||Booleano (tipo logico)</p>
+
+        El boolenao o de tipo logico, es uno ya conocido tambien, sus unicos valores 
+        son true and false, donde true es "si, correcto" y false es "no, incorrecto"
+        el uso de este tipo de dato es mayor mente en oepraciones de comparacion donde buscamos
+        saber si la operacion realizada es buna o mala, este tipo de datos lo e visto mas 
+        en funciones de ciomparacion de numeros como 4>1 o 2=5; <br>
+        <br> un ejemlo: <br>
+        let x= 4>1; <br>
+        console.log(x)//el resulatado sera "true" <br>
+        este tipo de dato tiene mvarios tipos de funciones y las veremos luego. <br>
+
+
+
+        <p>|||| Null</p>
+        es pocas palabras, el tipo "null" es sin definir o una variable vacia que espera ser asignada
+        se puede usar para inicializar alguna funcion y es simplemente para tener una variable 
+        a la que se le asignara un valor mas tarde, este tipo de dato se es designado por el 
+        programads a diferencia de undefined. <br>
+
+        <br> un ejemplo de null seria asi: <br>
+        let age = null;
+        <br>console.log(age)// null, debido a que esta vacia y no posee ningun valor.
+
+
+
+        <p>|||| Undefined</p>
+
+        el tipo de dato undefined es algo que es asignado por JS de manera automatica
+        , osea que se lo asigna JS, este tipo de datos se da cuando una variable no posee 
+        dato alguno, esta vacia y tampoco se le a asignado el valor de "null", la variable esta unicamente defionida 
+        y sin ningun valor: <br><br>
+        ejemplo: <br>
+
+        let x;
+        <br>console.log(x) //undefined no tiene ningun valor y por eso imprine este tipo de dato. 
+
+        
+        <p>||||||Object and Symbol</p>
+
+        Object sirve para agurpara pares de clave-valor, es desir (name: "jorge", years:24),
+        object es utilisado para agrupar ya sea cadenas, numeros o otros tipos de datos, y estos mismos obgetos
+        son usados como identificadores, su uso es como un contenedores de datos.
+
+        <br><br> 
+        let person = { <br>
+            name: "John", <br>
+            age: 30, <br>
+            job: "Developer"<br>
+          };<br>
+
+          esto seria un objeto. <br>
+        
+        <br>A diferencia de <strong>Symbol</strong>, que cumple la misma funcion pero de una manera mas estricta 
+        , es un identificador unico: <br>
+        <br>
+        let id = Symbol("id"); <br>
+        let user = {<br>
+        name: "Alice",<br>
+        [id]: 1234  // `id` es un símbolo único <br>
+        };<br>
+
+        <strong>mas adelante se profundisara en este tema.</strong>
+
+
+
+        <p>|||| Typeof</p>
+
+
+        simplemente el Typeof, es usado para imprimir el tipo de dato que estamos
+        utilizando, ya sea object, null, number, string, NaN o undefined. <br>
+
+        El typeofoperador devuelve el tipo del operando. Es útil cuando queremos procesar valores de distintos tipos de forma diferente o simplemente queremos hacer una comprobación rápida.
+
+        <br>Una llamada a typeof xdevuelve una cadena con el nombre del tipo:
+
+        <br><br>
+        typeof undefined // "undefined"<br>
+
+        typeof 0 // "number"<br>
+        
+        typeof 10n // "bigint"
+        <br>
+        typeof true // "boolean"
+        <br>
+        typeof "foo" // "string"
+        <br>
+        typeof Symbol("id") // "symbol"
+        <br>
+
+        <p class="mensaje">____________________________________________________</p>
+         <br><br>
+
+        <!-- aqui vamoos otra vez, Que tanto quiere lo que quiere? -->
+
+        <!-- esto me entretiene pero debo superar ese temor al exito ganado... -->
+
+        Continuemos!!!
+
+        <br>
+
+        En las <strong>strings</strong>, cadenas, una de las ventajas de usar la comillas invertidad
+        es que ademas de agregar ${ } tambien facilita el salto de linea;
+        <br>
+
+        let x= `cual es tu color favorito
+        el mio es el verde.`; <br>
+        en cambio si lo hacemos con las comillas dobles deberemos agregar un salto de linea
+        de manera ,manual para que suceda: <br>
+
+        let x= "hola mundo bienvenidos\na mi sitio web":; <br>
+
+
+        <p>Metodos en JS</p>
+
+
+        
+        </div>
+
+    </body>
+</html>

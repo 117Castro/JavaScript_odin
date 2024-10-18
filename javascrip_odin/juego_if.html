@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de if, else if y else</title>
+</head>
+<body>
+    <h1>Prueba de if, else if y else</h1>
+    <p>Esta web esta fuera de index ya que es por mera curiosidad de probar el if...</p>
+    Los procesos y respuestas estaran cargados en la pagina o tambien en consola <br>
+
+    <br>
+    Consola: <br>
+
+    valor =12;<br><br>
+
+    if (valor>24){<br>
+        console.log("es mayor");<br>
+
+    }else if(valor==24){<br>
+        console.log("es igual a 24");<br>
+
+    }else {<br>
+        console.log("es menor")<br>
+
+    }<br><br><br><br><br>
+
+
+    Impresion en documento<br><br>
+    if (valor= 12){<br>
+        suma= valor + 43;<br>
+        document.getElementById("sumar").innerHTML=suma;<br>
+    }else if(valor>23){<br>
+        resta=valor-453;<br>
+        document.getElementById("restar").innerHTML=resta;<br>
+    }else{<br>
+        document.getElementById("valor").innerHTML=valor;<br>
+    }<br><br>
+
+    <h3>El resultado:</h3>
+    <p id="sumar"></p>
+    <p id="restar"></p>
+    <p id="valor"></p>
+
+    <script src="./javascript/ifelse.js"></script>
+    Me a tomado un rato lograr que funcionara bien el codigo
+    y daba error debido a la posicion del script src, 
+    se debe tomar en cuenta la palabra DOM "esto seria el arbol que tiene 
+    y sugeta tu codigo completo, con js lo que hacemos es modificar nodos del arbol 
+    para que ejecute acciones espesificas que nosotros le asignemos a la maquina" 
+    DOM (El DOM organiza todos los elementos de una página (etiquetas, atributos,
+    texto, etc.) como nodos en un árbol jerárquico.) Por eso, colocar el script
+    al final del body es una práctica común y recomendada en desarrollo web ya que permite
+    que se cargue todo el codigo y que despues se ejecuten las modificaciones de 
+    los nodos.
+
+    <h2>Explicación Extendida del DOM
+    </h2>
+    <p>El DOM (Document Object Model) es como un puente entre tu código y la página web. Imagina que el DOM es como un mapa interactivo de todos los elementos de tu HTML. Cada elemento (etiqueta) es un nodo en ese mapa, y puedes recorrerlo, modificarlo o incluso agregar y eliminar partes de él usando JavaScript.</p>
+
+    <h1>Resumen:</h1>
+    <ul>
+        <li>El DOM permite acceder y manipular los elementos de tu página de forma dinámica.
+        </li>
+        <li>Puedes seleccionar cualquier elemento del HTML, cambiarlo, eliminarlo o añadir nuevos elementos con JavaScript.
+        </li>
+        <li>Es la base para crear páginas interactivas, como cambiar texto, mover elementos o hacer animaciones sin necesidad de recargar la página.
+        </li>
+    </ul>
+
+    <!-- suficiente por hoy -->
+</body>
+</html>

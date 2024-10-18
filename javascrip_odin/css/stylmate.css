@@ -1,0 +1,47 @@
+*{
+    border: 2px solid red;
+}
+
+body{
+    border: 2px solid black;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+
+
+h1{
+    background-color:orange;
+    text-align: center;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid black;
+}
+
+
+p{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(109, 3, 3);
+}
+.mensaje{
+    text-align: center;
+    font-size: 8px;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}

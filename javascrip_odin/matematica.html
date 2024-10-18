@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matematica en JavaScript</title>
+        <link rel="stylesheet" href="./css/stylmate.css">
+        <link rel="website icon" type="png" href="">
+      
+    </head>
+
+    <body>
+        
+
+        <ul class="pag">
+            <il><a href="./index.html" target="_blank" rel="noopener noreferrer">index</a></il>
+            <il><a href="./mecanicavariable.html" target="_blank" rel="noopener noreferrer">variables</a></il>
+            <il><a href="./nuemros.html" target="_blank" rel="noopener noreferrer">numeos</a></il>
+            <il><a href="./nuemros_hexagesimales.html" target="_blank" rel="noopener noreferrer">nuemros hexagesimales</a></il>
+
+                    
+        </ul>
+
+        <div id="sala1">
+            <h1>Pagina de prubas aritmeticas basicas con JavaScript</h1>
+            <p>Ejercicios basicos de aritmetica en script</p>
+            <p>post: en un mismo scrip da error si repito varibles...
+            mas bien en todos los script de la pagina aplica.</p>
+            <div>
+            
+
+
+            <!-- <script src="matejave.js"></script> -->
+            sumas
+            <p id="sumar"></p> <p id="sumarr"></p>
+            
+            <p id="summ"></p>
+
+            resta
+            <p id="resta"></p> <p id="restas"></p>
+
+            multiplicacion
+            <p id="multi"></p> <p id="mulri"></p>
+            
+            divisor
+            <p id="divicion"></p> <p id="diviciones"></p>
+
+            porcentage---para sacar el porcentage se usa esta formula: (por2/100)*por1=result;
+            <p id="porcentage"></p>
+
+            %esto es el resultado restante de unadivicion, ejemplo:48%9
+            <p id="divresult"></p>
+
+                <P>INCREMENTO Y DECREMENTO 
+                    ALGO QUE PASA AQUI ES QUE SOLO FUNCIONA CON VARIABLES Y NO NUMEROS</P>
+            
+            <br>
+            Algo a tomar en cuenta es que el incremento o decremento e los numeros unicamente funciona cuando lo colocamos en variables no en numeros
+            funcionaria en  x++ y no en 5++ <br>
+
+            <br>
+            Tambien mencionar otra cosa muy importante, ya que esto lo utilisaremos mucho cuando tratemos funciones
+            es importante dejar claro que esta el prefijo y sufijo, es decir colocar los signos antes o despues de la variable,
+            al colocarlo antes de la variable se mostrara el valor de la variable aumentada pero al colocar los signos despues ed la variable se 
+            mostrara el valor anterior de la variable a la que le pongamos los signos: 
+            ++x // mostrara el valor aumentado,  x++ //mostrara el valor anterior en caso de una funcion. <br>
+            <br>    
+             incrementacion de numeos naturales
+            <p id="incrementar"></p>
+            <p id="increment"></p>
+
+            decrementaciopn de numeros naturales
+            <p id="decrementacion">
+            <p id="decrement"></p>
+            </p>
+
+            numeros elevados con exponentes
+            <p id="expo"></p>
+            </div>
+
+            <div>En javascript, la aritmetica escolar es la misma que se aplica aqui,
+                el orden de las operaciones es el mismo, primero la * luego /, le sigue la
+                + y de ultimo -, sin embargo cuando tenemos operandos de igual nivel se lee de 
+                izquierda a derecha y se realiza la operacion y para elegir nosotros
+                el orden de la operacion usamos los "( )" para definir ese orden. 
+            </div>
+            <script>
+            
+            //suma
+            let s= 23 + 23;
+            document.getElementById("sumar").innerHTML=s;
+
+            //suma con variables
+            let d= 2;
+            let b= 5;
+            let S= d+b;
+            document.getElementById("sumarr").innerHTML= S;
+
+            //operacion con suam
+            let a=3;
+            let x= (104 + 2) * a;
+            document.getElementById("summ").innerHTML= x;
+
+
+            //resta
+            let rs= 23 -78;
+            document.getElementById("resta").innerHTML=rs;
+
+            let rls= 23;
+            let jhk= 45;
+            let xcv= rls -jhk;
+            document.getElementById("restas").innerHTML= xcv;
+
+            </script>
+
+            <script>
+                //cultiplicador
+
+            let m= 23*2;
+            document.getElementById("multi").innerHTML=m;
+
+            let mulri_1=23;
+            let g= 34;
+            let resulmulti= mulri_1 *  g;
+            document.getElementById("mulri").innerHTML=resulmulti;
+
+
+            //divicion
+
+            let div1=253 / 24;
+            document.getElementById("divicion").innerHTML=div1;
+
+            let div2= 4875;
+            let div3= 89;
+            let resuldiv= div2/div3;
+            document.getElementById("diviciones").innerHTML=resuldiv;
+
+            </script>
+
+            <script>
+                //porcentages
+
+                let por1= 299.99;
+                let por2=15;
+                    // la forma de sacar un porcentage es:
+                let porcenresul= (por2 /100) * por1;
+                document.getElementById("porcentage").innerHTML=porcenresul;
+
+                //diferente de sacar lo que resta de una divicion
+                let dr1=48;
+                let dr2=9;
+                let drresult= dr1%dr2;
+                document.getElementById("divresult").innerHTML=drresult;
+            </script>
+
+            <!--ALGO MUY INTERESANTE EN SI Y RARO ES QUE SOLO FUNCIONA CON 
+            VARIABLES Y NO CON NUMEROS DIRECTAMENTE-->
+            <script>
+                //incermento 
+                let inc1= 23;
+                let inc2=34;
+                inc1++;
+                gf= inc2++;
+                document.getElementById("incrementar").innerHTML=inc1;
+                document.getElementById("increment").innerHTML=gf;
+
+                //decrementar numeros 
+                let dec1=23;
+                dec1--;
+                document.getElementById("decrement").innerHTML=dec1;
+
+            </script>
+
+            <script>
+                //exponenciales elevados
+
+                let exp1=12**4;
+                document.getElementById("expo").innerHTML=exp1;
+            </script>
+        </div>
+
+        
+
+    </body>
+</html>

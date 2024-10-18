@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imprime Hola mundo Script</title>
+        <link rel="stylesheet" href="./css/styl.css">
+        <link rel="website icon" type="png" href="">
+
+
+    </head>
+    <body>
+
+        <ul class="pag">
+            <il><a href="./mecanicavariable.html" target="_blank" rel="noopener noreferrer">variables</a></il>
+            <il><a href="./matematica.html" target="_blank" rel="noopener noreferrer">Matematica</a></il>
+            <il><a href="./nuemros.html" target="_blank" rel="noopener noreferrer">numeos</a></il>
+            <il><a href="./nuemros_hexagesimales.html" target="_blank" rel="noopener noreferrer">nuemros hexagesimales</a></il>
+
+
+        </ul>
+        <!-- segunda leccion de JS -->
+        <ul class="pag">
+            <il><a href="./tipos_y_condicionales.html" target="_blank" rel="noopener noreferrer">Tipos y condicionales</a></il>
+            <il><a href="./metodosJS.html" target="_blank" rel="noopener noreferrer">Metodos de casdenas</a></il>
+            <il><a href="./metodos_condicionales.html" target="_blank" rel="noopener noreferrer">Metodos condicionales</a></il>
+
+            
+        </ul>
+
+        <!-- leccion de fuciones -->
+
+        <ul class="pag">
+            <li><a href="./funciones.html" target="_blank" rel="noopener noreferrer">Funciones</a></li>
+            <li><a href="./Nuevos_JS/resolucion_retos.html" target="_blank" rel="noopener noreferrer">Solucion de problemas</a></li>
+            
+        </ul>
+
+        <h1>Imprimiendo "Hola mundo en script.js"</h1>
+        <h2>prueba de live server</h2>
+        <h2>what is live server?</h2>
+
+
+        <p>Live Server es una extensión muy útil para Visual Studio Code (VSCode) que te permite crear un servidor local para tus archivos HTML, CSS y JavaScript. Esto tiene varias ventajas, especialmente cuando estás desarrollando sitios web.</p>
+
+
+        <!-- --------------------------- -->
+<!-- para la visualisacion de todos los textos y acciones debe ser en F12 + consola -->
+
+
+        <!-- escribo la accion de js directamente en el archivo html para mostrar en consola. -->
+        <script>
+            console.log("Hola mundo");
+
+            console.log ("mensaje sucesiovo para prueba de lenguaje");
+        </script>
+
+        <!-- este scirpt me enlasa a un archivo adjunto con lo que quiero que haga el codigo js -->
+        <script src="./javascript/mensajes.js"></script>
+
+
+        <script>
+            console.log("orden delmensaje");
+        </script>
+
+        <script src="./javascript/variable.js"></script>
+
+
+        <!-- con este script envio un mensaje de alerta con lo que quiero que diga -->
+        <script>
+            let mensaje;
+            mensaje = "Hola, esta genial, fui capaz de crear una alerta con javascript.";
+
+            alert(mensaje);
+        </script>
+
+        <!-- genial, toma nota, para colocar un comentario en el teclado mecanico en
+        ingles se pulsan control+k+u -->
+
+            <script>
+                console.log("hola mundo");
+            </script>
+
+            <script>
+                function lento(){
+                    let volt= 32;
+
+                    console.log(volt);
+
+                }
+
+                lento();
+            </script>
+
+
+
+            <script>
+                function gold(){
+                    const valores= "el valor del producto debe ser igual al que ofrece";
+
+                alert(valores);
+                
+                }
+                gold();
+            </script>
+        
+            <!-- ya le estoy pillando el tiro a esto de declarar variables
+            basicas, y el teclado funciona de manera exelente. -->
+
+                <!-- no necesito hacer una funcion para imprimir 
+                mas de una variable en un solo script -->
+                <!-- si meto datos nuevos a una variable ,, elimina los datos
+                antiguos e imprime los nuevos -->
+            <script>
+                let trab;
+                trab= "magnitudes";
+                let trab1= "prototipos";
+                trab1= 23;
+
+                console.log(trab, trab1);
+            </script>
+
+            <!-- la declaracion repetida de una sola variable proboca error -->
+            <!-- <script>
+                let ms="hola";
+                let ms="adios";
+                console.log(ms)
+            </script> -->
+
+            <script>
+                let Nombre= 23453463;
+                console.log(Nombre)
+            </script>
+
+            <!-- es posible declarar una variable sin declarar una variable
+            pero es una mala practica -->
+            <script>
+                num=5
+                console.log(num)
+            </script>
+        
+        <!--si funciona 'const' y a diferencia de var y let, esta no se puede
+        cambiar el valor asignado  -->
+            <script>
+                const micumple= '17.11.2003';
+                //const micumple='jdshf uisdhf ';
+                //interesante con la doble pleca coloco comentarios
+                //dentro de la script
+
+                console.log(micumple)
+            </script>
+
+            <script>
+                //uso de const
+                const COLOR_NARANJA= "#FF7F00";
+                const COLOR_RED = "#F00";
+                const COLOR_GREEN = "#0F0";
+                const COLOR_BLUE = "#00F";
+
+                let color= COLOR_NARANJA;
+                console.log(color)
+            </script>
+     
+
+    </body>
+</html>

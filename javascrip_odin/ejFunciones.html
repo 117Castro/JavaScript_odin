@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">  
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicios de funciones</title>
+        <link rel="stylesheet" href="">
+        <link rel="website icon" type="png" href="">
+
+    </head>
+    <body>
+        
+        <h1>Ejerciocios de funciones</h1>
+
+        <p><strong>Escriba una función llamada add7 que tome un 
+            número y devuelva ese número + 7.</strong></p>
+            <br>El resultado es; <br>
+            <p id="addd7"></p>
+            el ejecicio es: <br><br>
+
+            function add7(){<br>
+                let va1=24;<br>
+                let va2= va1 + 7;<br>
+                return  va2; <br>
+            }<br>
+            <br>
+            document.getElementById("addd7").innerHTML= add7();<br><br>
+
+
+            <p><strong>Escriba una función llamada multiplyque tome 2 
+                números y devuelva su producto.</strong></p>
+
+            el resultado; 
+            <p id="multy"></p>
+
+            el ejercicio: <br><br>
+            function multi(nun1, nun2){<br>
+                return nun1*nun2;<br>
+            }<br>
+            <br>
+            document.getElementById("multy").innerHTML=multi(34, 56);<br>
+            <br>
+
+
+
+            <p><strong>Escriba una función llamada capitalizeque tome una cadena y la 
+                devuelva con solo la primera letra en mayúscula. Asegúrese de 
+                que pueda aceptar cadenas en minúscula, MAYÚSCULAS o ambas.</strong></p>
+            <a href="./metodosJS.html" target="_blank" rel="noopener noreferrer">Metodos en cadenas</a>  <br>
+            el resultado:
+            <p id="may"></p>
+
+            el preseso usando .toUpperCase(); <br><br>
+
+            function mayus(){<br>
+                let mas= "hola mundo";<br>
+                let resul= mas[0].toUpperCase()+mas.slice(1).toLowerCase();<br>
+                document.getElementById("may").innerHTML=resul;<br>
+            }<br><br>
+            
+            mayus();<br><br>
+
+            
+
+            <p><strong>Escriba una función llamada lastLetterque tome una cadena 
+                y devuelva la última letra de esa cadena:</strong></p>
+
+            el resultado; <br>
+            <p id="lastt"></p>
+            el proceso usando slice: <br><br>
+
+            function last(nu1, nu2){<br>
+                let cadena="en esta cadena solo seleccionara la leetra que yo le pida en el parametro.";
+                <br><br>
+                let cad= cadena.slice(nu1, nu2);<br>
+                document.getElementById("lastt").innerHTML=cad;<br>
+                <br>
+            }<br><br>
+            
+            
+            last(-2,-1);<br><br>
+
+            Si quieres seleccionar una letra específica o una subcadena específica 
+            utilizando índices negativos, asegúrate de que el primer valor sea menor 
+            o igual que el segundo valor cuando los parámetros son negativos.
+
+        <script src="./javascript/ejercicio_funciones.js"></script>
+    </body>
+</html>

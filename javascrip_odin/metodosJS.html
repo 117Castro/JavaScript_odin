@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Metodos</title>
+        <link rel="stylesheet" href="./css/styldatos.css">
+        <link rel="website icon"    type="png" href="">
+
+    </head>
+
+    <body>
+        <ul class="pag">
+            <il><a href="./index.html" target="_blank" rel="noopener noreferrer">Index principal</a></il>
+            <il><a href="./tipos_y_condicionales.html" target="_blank" rel="noopener noreferrer">Tipos de datos</a></il>
+            <il><a href="./metodos_condicionales.html" target="_blank" rel="noopener noreferrer">Metodos condicionales</a></il>
+
+
+        </ul>
+        <div id="sala1">
+            <h1>Metodos con cadenas en JS</h1>
+            <p>Ejercicios con metodos en javascript</p>
+            <p>post: los errores ortograficos es lo de menos solo quiero esta 
+                web para tener referencia de ejercicios para refrescar la memoria y tener la informacion 
+                mucho mas accesible.
+            </p>
+           
+            <br>
+            <p>Metodos con cadenas en JS</p>
+            <br>
+
+            Que son los metodos?
+            <br>
+            Expliquemoslo de este modo: sabes lo que es un objeto, el objeto es un identificador que dentro de 
+            este hay propiedades, que a dichas propiedades se les asignan valores, esos valores 
+            pueden ser numericos o de cadenas. <br>
+            Dentro de esos objetos tambien se pueden introducir funciones, y a esas funciones 
+            que se almacenan dentro de esos objetos es a los que llamaremos metodos, de ahi la 
+            programacion orientada a obgetos. <br>
+
+            <br>Para sintetizar, un metodo es una funcion dentro de un objeto que juega con las 
+            propiedades que hay dentro de esos objetos. <br><br>
+
+            Demos un ejemplo: <br><br>
+
+            let car={ <br>
+                marca: ford, <br>
+                modelo: mustang,<br>
+                anio: 1987,<br>
+                encendido; function(){<br>
+                 return   `${this.marca} ${this.modelo} ${thi.anio}`<br>
+                }<br>
+                console.log(encendido)// imprimira "ford mustang 1987"<br>
+            }<br>
+            <br>
+
+            en las funciones aregamos el "this." que es el conector que permite acceder 
+            a otras propiedades o tambien otras funciones dentro del objeto. Es como el cable 
+            conector entre la propiedad y en impresor. <br>
+            tambien mencionar que las propiedades llevan dos puntos y el objeto lleva el igual y la llaves
+            y la funcion con su parentecis y sus llaves. <br><br>
+
+            <p class="mensaje">____________________________________________________</p>
+            <br><br>
+
+            Ahora que se entiende por encima el funcionamiento de los metodos continuamos con la explicacion de los metodos 
+            que estudiaremos en esta leccion...
+
+            <br><br>
+            <p>charAt()</p> 
+
+            el metodo "charAt()", es un metodo que permite visualizar la letra que queramos ver,
+            solo debemos digitar el numero de posicion que tenga en la palabra, texto o frace, dentro del parentecis 
+            colocamos el numero y el metodo charAt() nos mostrara la letra que ocupe la posicion de ese numeo, un ejemplo: 
+            <br><br>
+            la frace es "hola mundo" y la posicion que quiero que muestre es la 5: <br>
+            <p id="cha"></p>
+            let chae= "hola mundo"; <br>
+                let char= chae .charAt(5);<br>
+
+            <script>
+                let chae= "hola mundo";
+                let char= chae .charAt(5);
+                document.getElementById("cha").innerHTML=char;
+            </script>
+
+
+            <p>charCodeAt()</p>
+
+            en pocas palabras charcodeAt() se puede usar como descodificados, comparador o desifrador por asi decirlo, 
+            ya que lo que hace es mostrar el unicode del caracter seleccionado en un string, osea este metodo
+            en lugar de mostrar la letra de la string, lo que muestra es su unicode de la letra en cuestion, que 
+            esta basado en UTF-16 que son numero del 0 al 65535.
+            <br> De loscos pero seria util para comunicarse en clave con otra persona... <br>
+            ejemplo: <br>
+
+            
+            let x= "hola mundo"; <br>
+            console.log(x.charcodeAt(6))// imprimira el unicode de la letra "m".
+            <p id="cod"></p>
+
+            <script>
+                let co= "hola mundo";
+                let bg= co.charCodeAt(6);
+                document.getElementById("cod").innerHTML= bg;
+            </script>
+
+            <p>Metodo at()</p>
+            este es una actualizacion de at[], que para que sirve? para lo mismo que 
+            charAt(), pero este es mas flexible, permite la busqueda de caracteres usando numeros positivos 
+            y negativos, en los numeros positivos se inicia desde el 0 y en adelante tomando en cuenta
+            que el espacio tambien se cuenta, y si quero acceder a un caracter de los ultimos puedo colocarun numero negativo siendo el -1 el numero\
+            de inicio, esto me permite una mayor flexibilidad al momento de la seleccion de caracteres. 
+            <br>un ejemplo ya que cumple la misma funcion de charAt() pero mejor:
+
+            <br><br>
+            let x= "hola mundo"; <br>
+            console.log(x.at(1))// "o"
+            <p id="sd1"></p>
+            console.log(x.at(-2));//"d"
+            <p id="sd2"></p>
+
+            <script>
+                let sd="hola mundo";
+                let ds= sd.at(1);
+                let ds1=sd.at(-2);
+
+                document.getElementById("sd1").innerHTML=ds;
+                document.getElementById("sd2").innerHTML=ds1;
+            </script>
+
+            <p>Indice por corchetes[]</p>
+            La busqueda de caracteres mediante corchetes es la mas basica y una de las mas 
+            usadas debido a la facilidad de uso, sin embargo no es posible el uso de indices negativos,
+            se debera usar el metodo at(), ya que es muy simple de usar, solo colocas el cochete al 
+            lado de strin de la que quieras buscar el caracter en cuentios y lo imprimira, pero con este metodo 
+            no es posible modificar un caracter de la string. <br>
+
+            veamos un ejemplo: <br><br>
+            let x= "hola mundo"; <br>
+            console.log(x[1])// "o"
+            <p id="cor"></p>
+            
+            <script>
+                let dfg= "hola mundo";
+                document.getElementById("cor").innerHTML=dfg[1];
+            </script>
+
+
+            <p>Extraccion de cadenas con JS</p>
+
+
+            determinemos esto, el sustraer de una cadena es seleccionar por parametros entre 
+            parentesis la cadena que queremos que imprema como (7, 12) y va a imprimir las letras que tengan ese parametro. 
+            Ademas hay tres formas conocidas para llevar a cabo esta extraccion:;
+            <br><br>
+            slice(star, end) con este parametro podemos usar negativos como con at()respetando las reglas de orden, negativos empiezan en -1 y positivos en 0, tambien tomando en cuenta que con este la ultima pocicion no se imprime por eso se debe colocar un valor de mas al finar de lo que queremos que imprima.<br>
+            <br>substring (star, end) al parecer este es mas limitado ya que no permite el uso de negativos y se colocan los parametros que se quieren substraer, tambien si los valores estan alreves el automaticamente hace el cambio y ordena la cadena. <br>
+            <br>substr(star, lenght) este es por decirlo asi un poco mas analogico, debemos tener bien definido de ante mano el parametro que queremos que substraiga, colocamos el parametro inicial y contamos el numero de cadena que queramos que substraiga, un (1, 5) eh imprime el valor 1 y cuenta 5 espacios para imprimir el valor substraido. <br>
+            <br> vaya complicacion son muchas substracciones, lo llamare subs de ahora en adelante... <br>
+
+            <strong>usaremos esto de prueba "hola mundo"</strong>
+            <br>
+            <p>usando slice()</p>
+            <br>una prueba sencilla de slice()  <br>
+            <br>text.slice(2, 9);
+            <p id="siu"></p>
+            imprime desde el 2 y se come el 9, para que salga el 9 debemos escribir 10 en lugar de 9... <br>
+
+            <script>
+                let gy="hola mundo";
+                let jh= gy.slice(2, 9);
+                document.getElementById("siu").innerHTML=jh;
+            </script>
+
+
+            <p>usando slice() pero con negativos</p>
+            gty.slice(0, -1);
+            <p id="siuuu"></p>
+
+            <script>
+                let gty="hola mundo";
+                let jth= gty.slice(0, -1);
+                document.getElementById("siuuu").innerHTML=jth;
+            </script>
+
+            <p>usando substring() este no admite negativos</p>
+            tuy.substring(0, 7);  si no se coloca el segundo valor se elmina.
+            <p id="ber"></p>
+
+            <script>
+                let tuy= "hola mundo";
+                let ge= tuy.substring(0, 7);
+                document.getElementById("ber").innerHTML=ge;
+            </script>
+
+            <p>usando substr()</p>
+            este es sililar al primero solo que en lugar de poner el final se pone el numero del tamano de la string que deseas imprimir. <br>
+            si no pones la longitud imprimira toda la cadena... <br>
+            yu.substr(2, 4);
+            <p id="io"></p>
+
+            <script>
+                let yu="hola mundo";
+                let yo= yu.substr(2, 4);
+                document.getElementById("io").innerHTML=yo;
+            </script>
+
+            <p class="mensaje">____________________________________________________</p>
+            <br><br>
+
+            <p>Mayusculas y minusculas.</p>
+
+            touppercase() y tolowercase(). Mayusculas y minusculas. <br>
+
+            toUppercase() imprime una nueva cadena completamente en mayusculas <br>
+            <br> "todo en mayusculas" ma.toUpperCase()
+            <p id="may"></p>
+            <script>
+                let ma="todo en mayusculas";
+                let mays=ma.toUpperCase()
+                document.getElementById("may").innerHTML=mays;
+            </script>
+
+            mio.toLowerCase() "TODO EN MINUSCULAS"
+            <p id="minu"></p>
+
+            <script>
+                let mio="TODO EN MINUSCULAS";
+                let lll= mio.toLowerCase();
+                document.getElementById("minu").innerHTML=lll;
+            </script>
+
+            <p>concat()</p>
+            este es el mismo uso de los unuarios +, concateta cadenas sin reemplasarlas
+            solo concate na asi de simple.....
+
+
+            <p>Trim()</p>
+            este metodoelimina los espacios en blanco que tengan agregados en las cadenas, 
+            al momento de imprimir la cadena pero si le pedimos que imprima la longitud de la 
+            cadena este nos dira el numero de digitos que tiene. ejemplo: <br>
+
+            let text1 = "     Hello World!     "; <br>
+            let text2 = text1.trim(); <br>
+            <br>
+            Length text1 = 22 <br>
+            Length text2 = 12    |Hello World! | Hello World! <br>
+            solo se nota la diferencia al pedir la longitud de la cadena. <br>
+
+            <p>TrimStar() y TrimEnd()</p>
+
+            El trimStart()método funciona como trim(), pero elimina los espacios en blanco sólo desde el comienzo de una cadena. <br>
+            El trimEnd()método funciona como trim(), pero elimina los espacios en blanco sólo del final de una cadena. <br>
+
+                <br>
+            <em>otro que es agregado es pad()</em>
+            <p>Pad()</p>
+            <p>PadStar() y PadEnd()</p>
+            Estos metodos buscan como finalidad el que las longitudes de las cadenas sean 
+            las mimas, con pad() podemos agregar (targetlentgh, padstring) (longitud, cadena)
+            ya sea al inicio o al final de la string. 
+            <br><br>
+            ejemplo de la padStar(): <br>
+           <br> let g= "5";
+           <br> let h= g. padStar(4,"-");
+           <br> console.log(h)/// ---5 , el padStar() rellenara la cadena hasta conseguir la longitud deseada desde el inicio
+           <br>
+           <br>
+           ejemplo de la padEnd():
+           <br>
+           <br> let g= "5";
+           <br> let h= g. padEnd(4,"-");
+           <br> console.log(h)/// 5--- , el padEnd() rellenara la estring hasta el final. <br>
+
+           <br>
+           <!-- ya es un poco tarde a este punto, pero los metodos 
+            deben estar sucedidos de la variable y luego el metodo -->
+            <p>Metodo repeat()</p>
+            el metodo repeat() repite el numero de veces que se le pida a una string, ejm: <br>
+
+            <br>let s = "hola mundo";
+            <br> let f=s.repeat(4);
+            <p id="ng"></p>
+            <script>
+                let s='" hola mundo "';
+                let f=s.repeat(4);
+                document.getElementById("ng").innerHTML=f;
+            </script>
+            ____________________________
+            <p>Reemplazar el contenido de una cadena</p>
+
+            El metodo replace(), se utiliza para actualizar o reemplazar una palabra o una frace en el documento
+            la sintaxis de este metodo es <em><strong>variable.replace(searchvalue, newvalue)</strong></em>
+            el buscar valor se escribe la palabra o frace que deseamos reemplazar y el nuevo valores por 
+            la cual queremos cambiarlo. <br>
+            Cosas importantes a tomar en cuenta es que searchvalue es sencible a mayusculas
+            y en estos casos usamos /gi que por resumidas cuentas la  "g" es global y la "i" es insencible a mayusculas: veamoslo en el siguiente ejemplo: <br>
+
+            <br>
+            ejemplo: solo de /g <br>
+            <br>"hola mundo hablo desde html, y doy un mensaje desde HTML"
+            <br><em>qw.replace(/html/g, "JS");</em>
+            <br><em>usando replace() cambiamos html por JS</em>
+            <p id="sear"></p>
+
+            <br>
+            ejemplo: solo de /gi <br>
+            <br>"hola mundo hablo desde html, y doy un mensaje desde HTML"
+            <br><em>qw.replace(/html/gi, "JS");</em>
+            <br><em>usando replace() cambiamos html por JS sin importar las mayusculas</em>
+            <p id="search"></p>
+
+            <script>
+                let qw= "hola mundo hablo desde html, y doy un mensaje desde HTML";
+                let we= qw.replace(/html/g, "JS");
+                document.getElementById("sear").innerHTML=we;
+
+                let wee= qw.replace(/html/gi, "JS");
+                document.getElementById("search").innerHTML=wee;
+            </script>
+
+
+
+            <p>El meto de replaceAll()</p>
+            En terminos simples es la evolucion de replace(), si en replace() solo se podia cambiar el primer 
+            searchvalue que encontrata y para globalizar se nesecitaba agregar /g, en replaceAll()esto se hace automaticamente
+            este reemplaza todos las strings que quiereas cambiar, que este es sencible a mayusculas y para hacer el cambio de las que tengan 
+            mayusculas debera hacerce un proceso extra... <br>
+            <br>
+            ejemplo: <br>
+            <br> "Me gustan los gatos. Gato esa palabra me trae recuerdos. Los gatos son peludos"
+            <br><em>re.replaceAll("gatos", "perros");</em>
+            <p id="all"></p>
+
+            <br>
+            ejemplo: <br>
+            <br> "Me gustan los gatos. Gato esa palabra me trae recuerdos. Los gatos son peludos"
+            <br><em>re.replaceAll("Gato", "Perro");</em>
+            <p id="al"></p>
+
+            <em>Ahora que imprima todo con sus cambios respectivos</em>
+            <p class="mensaje">para esto solo debo reasignar variables</p>
+            <p class="mensaje">Laiky</p>
+
+            <p id="todo"></p>
+
+            <script>
+                let re= "Me gustan los gatos. Gato esa palabra me trae recuerdos. Los gatos son peludos";
+                let te= re.replaceAll("gatos", "perros");
+                let tee= re.replaceAll("Gato", "Perro");
+
+                //si quiero que imprima un solo texto ya modificado por completo
+                //puedo solo reasignar a la misma variable los metodos ya hechos. 
+
+                re= re.replaceAll("gatos", "perros");
+                re= re.replaceAll("Gato", "Perro");
+
+                document.getElementById("all").innerHTML=te;
+                document.getElementById("al").innerHTML=tee;
+
+                document.getElementById("todo").innerHTML=re;
+            </script>
+
+
+            <p>El metodo split()</p>
+            Este metodo convierte en array cualquier cadena si tu le dices como, esto es mas facil 
+            entenderlo con un ejemplo: <br>
+
+            A veces, los datos vienen en un formato complicado que necesita ser transformado en un formato más útil. Por ejemplo, un log de servidor puede tener información importante que necesitas dividir y analizar: <br>
+
+            <br><em>
+            let log = "2024-08-08 10:15:30 INFO User logged in"; <br>
+            let logParts = log.split(" ");<br>
+            let fecha = logParts[0]; // "2024-08-08"<br>
+            let hora = logParts[1]; // "10:15:30"<br>
+            let nivel = logParts[2]; // "INFO"<br>
+            let mensaje = logParts.slice(3).join(" "); // "User logged in"<br>
+            </em><br>
+
+            Este nos permite dividir laa informacion que recibamos de un string y separarla en array para trabajar
+            la informacion de forma individual. Puede ser separada por el split(separador, limitador). <br>
+
+            Separador: es el valor que usara para dividir la estring en seciones, bien puede ser 
+            por espacio simple " ", por comas ", ", pro varios tipos mas, "|"
+            inclusibe por simbolos, "&", esto es muy util en casos como el ejemplo ya mecionado anteriormente. <br>
+            <br>
+
+
+            ____________________________________________________
+            <br><br>
+            <p class="mensaje">continuemos con esta, "Las acciones forjan al hombre"</p>
+
+
+            ____________________________________________________
+            <p>Otros metodos con cadena</p>
+
+            El método <strong>String()</strong> en JavaScript es una función global que se utiliza para convertir valores a una cadena de texto (string).
+            Es útil para convertir distintos tipos de datos a una representación textual.
+
+            <br>
+            A decir verdad este metodo es mucho mejor que usar el .tostrinn() para convertir en variables
+            ya que al querer convertir variables con valores de null o undefined, esta arroja un error
+            , pongamos un ejemplo de esto: <br>
+
+            <em>
+            <br>
+            const nullVar = null;<br>
+            nullVar.toString(); // TypeError: Cannot read properties of null<br>
+            String(nullVar); // "null"<br>
+            <br>
+            const undefinedVar = undefined;<br>
+            undefinedVar.toString(); // TypeError: Cannot read properties of undefined<br>
+            String(undefinedVar); // "undefined"<br>
+            <br></em>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </body>
+
+</html>

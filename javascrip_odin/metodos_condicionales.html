@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible"  content="IE=edge">
+        <meta name="viewport"   content="width=device-width, initial-scale=1.0">
+        <title>Condicionales</title>
+        <link rel="stylesheet" href="./css/styldatos.css">
+        <link rel="website icon" type="png" href="">
+
+    </head>
+
+    <body>
+        <ul class="pag">
+            <il><a href="./index.html" target="_blank" rel="noopener noreferrer">Index principal</a></il>
+            <il><a href="./tipos_y_condicionales.html" target="_blank" rel="noopener noreferrer">Tipos de datos</a></il>
+            <il><a href="./metodosJS.html" target="_blank" rel="noopener noreferrer">Metodos de cadena</a></il>
+
+
+        </ul>
+        <div id="sala1">
+            <h1>Condicionales</h1>
+            <p>Inicio del uso de condicionales</p>
+            <p>Primeras practicas de condicionales, en esta web nos sentraremos en el lado divertido de JS, 
+                cito: Ahora es el momento de la parte divertida... Hasta ahora, no hemos hecho mucho con nuestra programación que no se pueda hacer con conocimientos matemáticos básicos. 
+                "The Odin Proyect".
+            </p>
+
+            <p>Comencemos con estas practicas...</p>
+
+            <p class="mensaje">La esencia de la programación es enseñarle a la computadora cómo tomar decisiones para hacer cosas más complejas.</p>
+
+            <p>Comparaciones</p>
+            Comencemos con las comparaciones, en la aritmetica de JS usamos mucho los comparadores: <br>
+
+
+            <!-- Waw cada vez voy mejorando la interfaz de la web para que se vea 
+            mas ordenada, eso ya es un gran cambio y un buen avance. -->
+            <ul class="normal">
+                <li class="li">Mayor/mero que: 5<4  ; 5>4 </li>
+                <li class="li">Mayor/menor que o igual a: a >= b, a <= b.</li>
+                <li class="li">Igual a: a == b siempre considerando que el doble = es para generar una comparacion dado que el igual simple es para asignacion.</li>
+                <li class="li">No es igual a: != es utilizado para la comparacion en busqueda de que el valor comparado no sean iguales. </li>
+                
+            </ul>
+
+            Sigamos: <br>
+            BOOLEANOS; en estas comparaciones siempre se devuelbe uno de dos resultados
+            ya sea "true" o "false". 
+            <br>
+
+            <ul class="normal">
+                <li>true- significa “sí”, “correcto” o “la verdad”.</li>
+                <li>false- significa “no”, “incorrecto” o “no es la verdad”.</li>
+            </ul>
+
+            Pongamoslo a prueba: <br><br>
+
+            para este ejemplo usamos dos variables tipo number(); <br>
+            Variables: 5 y 8. <br><br>
+
+            <strong><em>Prueba de mayor que:</em></strong> <br><br>    
+            <em>let my= 8>5;</em>
+            <p id="mayor"></p>
+            <em>let my2= 5>8;</em>
+            <p id="mayor2"></p>
+
+            <!-- menor -->
+            <p>_____________________________________</p>
+
+            <strong><em>Prueba de menor que:</em></strong> <br><br>    
+            <em>let mn= 8 < 5;  </em>
+            <p id="menor"></p>
+            <em>let mn2= 5< 8; </em>
+            <p id="menor2"></p>
+
+            <p>_____________________________________</p>
+
+            <strong><em>Prueba de igual que:</em></strong> <br><br>    
+            <em>let gj= 5==8;  </em>
+            <p id="igual"></p>
+            <em>let ig= 5==5;</em>
+            <p id="igual2"></p>
+
+            <p>_____________________________________</p>
+            <strong><em>Prueba de diferente que:</em></strong> <br><br>    
+            <em>let df= 5!=8;  </em>
+            <p id="diferente"></p>
+            <em>let dfg= 8!=8;</em>
+            <p id="diferente2"></p>
+
+            <p>_____________________________________</p>
+
+            <script>
+            // en este espacio se llevan a cabo todas las
+            //comparaciones aritmeticas de prueba.
+
+                //mayores
+               
+                let my= 8>5;
+                let my2= 5>8;
+
+                document.getElementById("mayor").innerHTML=my;
+                document.getElementById("mayor2").innerHTML=my2;
+
+                //menores
+
+                let mn= 8 < 5;
+                let mn2= 5< 8;
+
+                document.getElementById("menor").innerHTML=mn;
+                document.getElementById("menor2").innerHTML=mn2;
+
+                //iguales
+
+                let gj= 5==8;
+                let ig= 5==5;
+
+                document.getElementById("igual").innerHTML=gj;
+                document.getElementById("igual2").innerHTML=ig;
+
+                //diferente que
+
+                let df= 5!=8;
+                let dfg= 8!=8;
+
+                document.getElementById("diferente").innerHTML=df;
+                document.getElementById("diferente2").innerHTML=dfg;
+                
+
+
+            </script>
+
+            <!-- ____________________________________________ -->
+
+            Comparacion de diferentes tipos de datos. <br>
+            En el caso de comparar string y number, JS  lo que hace es convertir 
+            las cadenas en numeros para evaluar correctamente los valores asignados a la comparacion, 
+            por ejemplo: <br> <br>
+
+            <strong><em>alert( '2' > 1 ); // true, string '2' becomes a number 2</em></strong>
+            <br><br>
+            En el caso de las cadenas debemos ser mas quisquillosos, ya que comparar cadena con cadena implica comparar
+            letra por letra.
+            
+            <ul class="normal">
+                <li>Primero debemos comparar la primera letra y ver cual que la mayor y ahi termina.</li>
+                <li>Si las primeras letras son iguales repetimos el proceso con la segunda y del mismo modo hasta el final.</li>
+                <li>SI ambas cadenas terminan con la misma longitud significa que son iguales o gana la que es mas larga. </li>
+            </ul>
+            <em>El algoritmo de comparación dado arriba es aproximadamente equivalente al utilizado en diccionarios o guías telefónicas, pero no es exactamente el mismo.</em>
+            <em>En caso de comparar mayusculas con minusculas, las minusculas seran mayores ya que el ordenamiento de la tabla unicode en la que se codifica
+                estan en la cima las mayusculas y finalizando las minusculas.
+            </em><br><br>
+            <strong><em>console.log('a' > 'A'); // true</em></strong>
+            <ul class="normal">
+                <li>Las letras mayúsculas comienzan en 65 (A) y terminan en 90 (Z).</li>
+                <li>Las letras minúsculas comienzan en 97 (a) y terminan en 122 (z).
+                </li>
+            </ul>
+
+            <p>Comparadores de igualdad</p>
+
+            Ya es conocido el comparador de == igualdad, y la regla con este es que convierte uno de los 
+            datos a su contraparte, las cadenas a numeros etc... <br>
+
+            <br> Que sucede cuando comparamos una cadena bacia con el termino false: <br>
+            <em>alert( '' == false ); // true</em>
+            <br>
+            Nos dara como resultado true ya que convierte la cadena en su contraparte numerica que equivale a 0.
+            <br>Es como si comparamos el cero con false y dara el mismo resultado: <br>
+            <em>alert ( 0 == false); //true</em>
+            <br><br>
+            El comparador == convierte el dato string en 0 y el cero en binario es falso o negativo. <br><br>
+
+            Si queremos comparar una cadena con numeros y que el resultado sea false, debemos utilizar el comparador estricto que es "==="
+            <br><br>Este no permite el cambio de tipo, compara estrictamente las variables y dara false si no son del mismo tipo ya 
+            que este no convierte la variable en su comparador. 
+
+            <br><br>
+            <em>alert( 0 === false ); // false, because the types are different</em>
+
+            
+            <p class="mensaje">_________________________________________________</p>
+
+            <p>JavaScript if, else y else if</p>
+
+            <strong><em>if condicionante </em></strong>
+            <br>
+            "if" siempre debe ir escrito en minusculas ya que si se escribe las inicial en mayuscula
+            o ambas en JS se produciiira un error. <br> <br>
+
+            Que es if? este es un bloque de codigo que esta dentro de un script y es utilizado para ejecutar
+            una "condicion" si esta resulta ser verdadera. <br><br>
+            Su sintaxis es sencilla: <br><br>
+
+            if (Condicion <> <= >= == !=) { el proceso o accion de comparacion que queremos que ejecute nuestro codigo. }
+            <br>
+            <br>pongamos un ejemplo sencillo con una comparacion terminada en true; <br>
+
+            Colocamos una variable edad=19 y nuestro if determinara si es mayor de edad: <br>
+            
+            edad=19; <br>
+            if (edad >= 18){}
+            <p id="tru"></p>
+            
+            <script>
+                let edad= 19;
+                if (edad >= 18){
+                    document.getElementById("tru").innerHTML= "Eres mayor de edad. "
+                }
+            </script>
+
+            Tambien se puede usar el if como condicionante para comparar numeros: <br><br>
+            if(5>3){}
+            <p id="nur"></p>
+
+            <script>
+                let nu1=5;
+                if(nu1>3){
+                    document.getElementById("nur").innerHTML="es mayor";
+                }
+            </script>
+
+
+            <strong><em>else condicion</em></strong><br>
+
+            <em>La condicionante else, es una condicion que se agrega al if si este resuta ser false; <br><br>
+            Su sintaxis es la siguiente:</em> <br><br>
+
+            if (condicon){ <br>
+                proceso de comparacion <br>
+            } else {<br>
+                proseso de comparacion y resultado alterno <br>
+            } <br>
+            <br>    
+            Hagamos un ejemplo: <br>
+            if (20 < 15){es menor}else{es mayor} >
+            <p id="el"></p>
+
+            <script>
+                if (20 < 15){
+                    document.getElementById("el").innerHTML="es menor";
+                }else{
+                    document.getElementById("el").innerHTML="es mayor";
+
+                }
+            </script>
+
+
+            Otra comparacion: <br>
+            if (23423>= 2342345){mayor/igual}else{menor}
+            <p id="ji"></p>
+
+            <script>
+                if (23423>= 2342345){
+                    document.getElementById("ji").innerHTML=" el numero si es es mayor o igual";
+                }else {
+                    document.getElementById("ji").innerHTML=" el numero es menor";
+
+                }
+            </script>
+
+            <strong><em>else if</em></strong>
+            <em>Esta condicionante se coloca cuando queremos una segunda condicion de comparacion 
+                que nos permita llegar a otra respuesta si la primera resulto ser falsa, una ventaja es
+                que el else if se puede repetir as veces que sea necesarioobteniendo los resultado que queramos:
+            </em>
+
+            <br>
+            Su sintaxis: <br><br>
+
+            if(condicion){<br>
+                proceso condicional <br>
+            }else if(condicion 2){<br>
+                proceso condicional <br>
+            }else {<br>
+                proceso condicional <br>
+            } <br>
+
+            <br>Pongamos ejempos visuales: <br><br>
+
+            Una calculadora de notas; <br>
+            if (95>=90){aprobo}else if{} else {}
+            <p id="notas"></p>
+            En cambio si fuese la nota de 80 else if {aprobo}
+            <p id="mon"></p>
+
+            Pero si resultara que la nota es de 65 else{reprobo}
+            <p id="rep"></p>
+            <script>
+                if (95>=90){
+                    document.getElementById("notas").innerHTML="aprobo";
+
+                }else if (95 >= 70){
+                    document.getElementById("notas").innerHTML="aprobo";
+
+                }else{
+                    document.getElementById("notas").innerHTML="reprobo";
+
+                }
+
+                //nota de 85
+                if (85>=90){
+                    document.getElementById("mon").innerHTML="aprobo";
+
+                }else if (85 >= 70){
+                    document.getElementById("mon").innerHTML="aprobo";
+
+                }else{
+                    document.getElementById("mon").innerHTML="reprobo";
+
+                }
+
+                //nota de 65
+                if (65>=90){
+                    document.getElementById("rep").innerHTML="aprobo";
+
+                }else if (65 >= 70){
+                    document.getElementById("rep").innerHTML="aprobo";
+
+                }else{
+                    document.getElementById("rep").innerHTML="reprobo";
+
+                }
+            </script>
+
+            <em>Esto es lo que se debe tratar de momento con los condicionantes de if, else if y else</em>
+            <br> Sin embargo me gano la curiosidad y quise hacer alguna pruebas del if y las puse en una pagina fuera: <br>
+            <a href="./juego_if.html" target="_blank" rel="noopener noreferrer" >Juego del if</a>
+
+
+            <p class="mensaje">_____________________________________</p>
+            <p>Operadores logicos</p>
+            
+            Existen cuatro operadores logicos, pero de momento solo vamos a ver 3
+            de ellos, ||(OR), &&(AND) y !(NOT).    <br><br>
+
+            <p>OR||</p>
+
+            El operador or ||, es para compara en terminos booleanos si entre dos opcipnes 
+            hay una verdadera o si todas son falsas. <br>
+            Como se determina cuales son verdaderas o falsas? <br>
+            <em>Para determinar si una opcion es falsa en JS se tiene una lista, y en estas opciones estan los que consideraria impresion
+                de errores o nada:
+            </em>
+            <ul class="normal">
+                <li>0 es falso en booleanos</li>
+                <li>'' una cadena bacia es considerada falsa y tambien incluye cadenas de doble comilla ""</li>
+                <li>null es nulo vacio una variable que no posee valor por eso mismo JS la considera false</li>
+                <li>undefined es el mismo caso que con null, solo que aqui nisiquiera es nada.</li>
+                <li>NaN tambien es considerada false, ya que seria un error de formula</li>
+            </ul>
+
+            <br><br>
+            OR || considera verdader todo lo que no este en esta lista, incluyendo funciones basias
+            y objetos que no posean nada dentro. <br><br>
+
+            Al colocar dos opcines JS leera de izquierda a derecha del mismo modo que hace con los signos de comparacion
+            y al primer valor positivo lo imprimira en la consola o documento que se le indique.
+            <br><br>
+            Si en la linea de comparacion que por lo general es por condicion de if no hay ningun valor 
+            true, se imprimira el valor el ultimo valor falso que se tenga. "Recuerda que en la puerta logica de OR
+            el unico resultado de flase es: false||false // false". <br><br>
+            Pongamos algunos ejemplos: <br><br>
+
+            let valor1 = 0;          // Falso<br>
+            let valor2 = '';         // Falso<br>
+            let valor3 = 'Texto';    // Verdadero<br>
+            let resultado = valor1 || valor2 || valor3;<br>
+            <br>
+            console.log(resultado);  // Output: 'Texto'<br><br>
+
+            en este caso el valor impreso es el 3 ya que es una cadena que para JS  es un valor de true. <br><br>
+            Que tal ver algo con condicionantes: <br><br>
+
+            let edad = 20;<br><br>
+
+                if (edad < 18 || edad > 65) {<br>
+                    console.log('Edad fuera del rango permitido.');<br>
+                } else {<br>
+                    console.log('Edad dentro del rango permitido.');<br>
+                }<br>
+                // Output: 'Edad dentro del rango permitido.'<br><br>
+
+            En operaciones de if con comparacion usando or|| funciona de manera 
+            perceptible, si cumple con lo requerido en el rango asignado es true, de lo contrario se considerara 
+            false. <br>
+
+            <p> AMD &&</p>
+            And continua usando la misma logica que usamos en OR, peros de manera 
+            opuesta, mientras que OR imprimira el primer valor verdadero lo que hace AND es 
+            imprimir el primer valor que sea falso. <br><br>
+
+            En AND se ejecuta la opcion de: true && true = true, ya que conque exista un solo
+            valor que sea falso, este imprimira false. 
+
+            <em>
+            En OR la unica forma de obtener un false es que todas sus opciones sean false, mientras que en AND con 
+            una sola condicionante de false dara como resultado false, y para que el resultado sea true todas
+            sus opciones deben ser true y este mostrara la ultima opcion de true.
+            </em>
+            <br><br>
+            pongamos unejemplo: <br><br>
+
+
+
+
+
+            <em>tenemos dos valores que son true, imprimira el ultimo valor dado:</em><br>    
+            <em>
+            let nombre = "Carlos"; <br>
+            let edad = 30;<br><br>
+
+            console.log(nombre && edad); // Output: 30</em> <br><br>
+
+            <em>Pero si tan solo uno de los valores es false, imprimira false o ejecutara el proseso de else por dar 
+                una referencia: <br>
+            </em>
+            <em>
+            let a = false;<br>
+            let b = true;<br><br>
+
+            if (a && b) {<br>
+                console.log('Ambas son verdaderas.');<br>
+            } else {<br>
+                console.log('Al menos una es falsa.');<br>
+            }<br>
+            // Output: 'Al menos una es falsa.'<br><br>
+            </em>
+
+            Y es que AND obedece la regla de que solo dara true si todos son true e imprimira el ultimo valor de la comparacion... <br><br>
+
+            <p>NOT !</p>
+            Es el operador masa usado en los lenguajes de programacion por algunas razones: <br><br>
+            <ul class="normal">
+                <li>Convierte en su contraparte cualquier opcion dada, si su valor es true, ! lo convierte en false y viseversa </li>
+                <li>Si colocamos dos !! convierte la opcion en sui contraparte booleana, !!"hola" = true, una cadena es un valor verdadero, 
+                    !!null = false.
+                </li>
+                <li>Puede usarse para comparar si una opcion es verdadera o falsa. </li>
+                
+            </ul><br><br>
+
+            Pongamos un ejemplo: <br><br>
+
+            Invertir una variable. <br><br>
+            let isAvailable = true;<br>
+            console.log(!isAvailable); // Output: false<br><br>
+
+            Tambien convertir en su forma booleana. <br><br>
+            let value = 0;<br>
+            console.log(!!value); // Output: false<br><br>
+
+
+            <em>Pero cual es el uso primordial de NOT!; bueno es el invertir la logica de una opcion, simple, esto permite 
+                evaluar condiciones negativas, y saber si son verdaderas. 
+            </em>
+            <br><br><br>
+            <strong><em>Resumen de Usos</em></strong><br><br>
+
+            <ul class="normal">
+                <li>OR (||): Útil para seleccionar el primer valor válido.</li>
+                <li>AND (&&): Útil para asegurar que todas las condiciones sean verdaderas.
+                </li>
+                <li>NOT (!): Útil para invertir la lógica de condiciones.
+                </li>
+            </ul>
+
+            Estos operadores son fundamentales para la toma de decisiones y el control de flujo en JavaScript, haciendo tu código más dinámico y eficiente.
+
+            <p class="mensaje">_____________________________________</p>
+            
+            <p>La sentencia Switch</p>
+
+            <em>Switch es una sentencia que replica el funcionamiento de la operacion de 
+                if, else if y else. <br><br>
+                En este caso en lugar de empezar con un if, se comienza con un switchi y la condicionante:
+                <br><br>
+
+                switch (x){ <br>
+                    case 2:<br>
+                        console.log("es correcto");<br>
+                    break;<br>
+                    case 3:<br>
+                        console.log ('es incorrecto');<br>
+                    default:<br>
+                            console.log('nada que ver');<br>
+
+                }<br><br>
+
+            </em>
+            los case  ttoman    la funcion de 'else if' y seguido de cada case van :, 
+            y en el caso de break se coloca ; y cumple la funcion de detener la comparacion, de lo contraria ejecutaria todos los procesos que le siguen. <br><br>
+            <br><br>
+            default es el final, si no se encontro un resultado este se colocara en caso final
+            seria el else de nuestro if. <br>
+            <p id="sw"></p>
+
+            <script>
+
+                let x= 43;
+                switch (x){
+                    case 2:
+                        document.getElementById("sw").innerHTML="es correctp";
+                    break;
+                    case 3:
+                        document.getElementById("sw").innerHTML="es incorrecto";
+                    default:
+                        
+                        document.getElementById("sw").innerHTML="nada que ver";
+
+                    }
+
+            </script>
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </body>
+
+
+
+
+</html>

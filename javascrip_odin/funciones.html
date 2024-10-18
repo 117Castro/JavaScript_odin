@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funciones</title>
+        <link rel="stylesheet" href="./css/func.css">
+        <link rel="website icon" type="png" href="">
+
+
+
+    </head>
+
+    <body>
+        <ul class="pag">
+            <il><a href="./index.html" target="_blank" rel="noopener noreferrer">index</a></il>
+        </ul>
+
+
+        <div id="sala1">
+            <h1>Funciones</h1>
+            <p>Pagina de conceptos basicos de funciones y como operan</p>
+            <p>Aqui se van a ver conceptos basicos de funciones aplicando operaciones aritmeticas
+                y tambiens condicionales como el if y el switch.
+            </p>
+
+            
+            <em>Que es una funcion?</em><br><br>
+            
+            Una funcion es almacenamiento de codigo, es decir almacena bloques de
+            codigo ya elaborados y son llamados para ser ejecutados en otros fragmentos de 
+            de codigo. <br><br>
+
+            Si lo pensamos bien, se an utilizado funciones en todo el transcurso de estudio 
+            y prueba de codigo, algunos de estos ejemplos serian: <br><br>
+
+            <ul class="normal">
+                <li>replace() que se encarga de reemplazar strings por otras.</li>
+                <li>number()/parsefloat() que ambas son funciones que se encargan de convertir
+                    las string en tipo number.
+                </li>
+
+            
+            </ul>
+
+            <br>
+            Es decir la amyoria de codigo que utilizamos son funciones que ya estan establecidas
+            en JS y que nosostros las llamamos para que hagan lo que nosostros les pedimos
+            que hagan. <br><br>
+
+            Del mismo modo nosotros podemos crear nuevas funcines que cumplan con las 
+            acciones que queramos que realice nuestro codigo, ya sea para una formula matematica
+            o un proceso complicado que que requiera de mucho codigo, por eso el uso de las funciones
+            porque reutiliza un codigo ya escrito y que ahorra mucho tiempo de reescribirlo.
+
+            <br><br>
+
+            <em>La estructura de una funcion es simple, se necesita de la palabra 
+                clave function(parametro){ el proceso de codigo que queramos que ejecute}
+                y la llamada de la funcion por su respectivo nombre mas los ()=>  nombre().
+            </em><br>
+            <strong>
+            <br>Se veria de esta forma: <br><br>
+
+            function nombre(parametro){ <br>
+                console.log(nombre + "hola mundo") <br>
+            } <br><br>
+
+            monbre(argumento) <br><br>
+            </strong>
+
+            Algunos detalles sobre las funciones es que algunas pueden ser anomimas
+            , es decir que no tiene nombre dichas funciones.
+            <br><br>
+
+            <strong>Parametros de las funciones</strong><br><br>
+
+            Las funciones utilizan los parametros para indicar acciones o variables 
+            en el procesamiento de codigo. <br><br>
+            Como cuando le indicamos a la funcion number() que convierta un string a tipo 
+            number; para eso se debe espesificar la variable de tipo string que queremos
+            convertir y se veria algo asi: <br><br>
+
+            <em>let conv = number(string);</em><br>
+            <br> Tambien hay otras que no necesitan enscribir parametros como las que utilzan 
+            el .ramdon() que muestran un numero aleatorio dentro de su propio parametro,
+            y del mismo modo podemos crear una funcion que haga lo mismo que .ramdon() pero 
+            estableciendo nuestros propios parametros. <br><br>
+
+            <p>---------------------------------</p>
+
+            <em><strong>El alcanse de las funciones</strong></em>
+
+            <br><br>
+
+            El alcance de las funciones esta dividida en tres parametros: <br><br>
+            <ul class="normal">
+                <li>globalVar</li>
+                <li>localVar</li>
+                <li>bloqueVar</li>
+
+        
+            </ul>
+            <br>
+
+            <strong>Las variables declaradas fuera de una funcion son definidas como glovales y estas 
+            pueden verse alteradas o funcionar correctamente con las variables que esten
+            en uso en la funcion.</strong><br><br>
+
+            let globalVar = "Soy global";<br>
+            <br>
+            function mostrarGlobal() {<br>
+                console.log(globalVar); // Accede a la variable global<br>
+            }<br>
+            <br>
+            mostrarGlobal(); // "Soy global"<br>
+            <br>
+
+            <strong>Las variables que son declaradas dentro de una funcion se denominan variables 
+            locales que solo pueden ser ejecutadas y afectadas dentro de la misma funcion. 
+            <br><br></strong>
+            function miFuncion() {<br>
+                let localVar = "Soy local";<br>
+                console.log(localVar); // Funciona dentro de la función<br>
+            }<br>
+            <br>
+            miFuncion();<br>
+            // console.log(localVar); // Error: localVar no está definida fuera de la función
+            <br><br>
+
+            <strong>En cambio las variables de tipo bloqueVar se escriben dentro de un operados condicional 
+            if y estas solo pueden ejecutarse dentro de la funcion que contenga el condicionante 
+            if.</strong>
+            <br><br>
+            if (true) {<br>
+                let bloqueVar = "Dentro del bloque";<br>
+                console.log(bloqueVar); // Funciona dentro del bloque<br>
+            }<br>
+            // console.log(bloqueVar); // Error: bloqueVar no está definida fuera del bloque
+            <br><br>
+
+            <strong><em>En resumidas cuentas, en el caso de LocalVar y bloqueVar
+                el llamado de variables debe ser dentro de la funcion o el condicionante
+                para que se imprima correctamente la variable en cuestion: el console.log() 
+                debe estar adentro de la funccion, eso es todo...
+            </em></strong><br><br>
+
+
+            <p>---------------------------------</p>
+            <strong>Valores de retorno en las funciones</strong>
+            <br><br>
+
+            <em>Que son los valores de retorno?</em> <br><br>
+
+            Los valores de retorno son datos resultantes de funciones que pueden reciclarse
+            para usarlos luego en otras funciones o procesos. <br><br>
+
+            <strong>
+            function calcularArea(largo, ancho) {<br>
+                return largo * ancho; // Devuelve el área<br>
+            }<br><br>
+            
+            let area = calcularArea(5, 3);<br>
+            console.log(area); // Imprime: 15<br><br></strong>
+
+            <strong>Esto es mas comprensible:</strong> <br>
+            Si usas return, la función además de realizar acciones, devuelve un valor que puedes guardar 
+            o utilizar después de la ejecución. <br><br>
+
+            Pongamoslo de esta manera, una funcion por si sola es capas de imprimir 
+            cualquier valor de un proceso o cadena ya sea desde la consola u otro forma 
+            de imprimirlo, pero ese resultado no se puede reutilizar despues. <br><br>
+
+            Si tratas de usar el resultado de esa funcion almacenandolo en una variable 
+            para usarlo en otro proceso dicha variable tendra como valor "undefined"
+            en cambio si al finalizar el proceso de la funcion colocamos un "return"
+            la informacion, dato o valor que resulte lo devolvera para poder usarlo en 
+            alguna variable que queramos usar mas adelante. <br><br>
+
+            Este es un ejemplo que no contiene "return"<br><br>
+
+
+            <em>function saludar() {<br>
+                console.log("Hola, Mundo!"); // Imprime en la consola, pero no devuelve ningún valor<br>
+            }<br><br>
+            
+            saludar(); </em><br><br>
+            <em>let resultado = saludar(); // Ejecuta la función, pero 'resultado' será undefined<br>
+            console.log(resultado); // Imprime: undefined<br></em><br>
+            
+            Y asi se veria si colocamos el return al finalizar el proceso: <br><br>
+
+            <em>function sumar(a, b) {<br>
+                return a + b; // Devuelve el resultado de la suma<br>
+            }<br><br>
+            
+            let resultado = sumar(3, 4); // 'resultado' será 7<br>
+            console.log(resultado); // Imprime: 7</em><br><br>
+
+            <em>Dato importante, el "return" debe colocarse al final con el valor que queramos 
+                que devuelva.
+            </em>
+
+            <p>---------------------------------</p>
+
+            <h3>Expreciones de funciones</h3>
+
+            Vamos al grano, hay situaciones en que se puede usar las funciones 
+            dentro de variables y a esto lo llamamos acciones, acciones que devuelben
+            un valor como este ejemplo: <br><br>
+
+            <strong><em>
+            function sayHi() {   // (1) crear<br>
+                alert( "Hola" );<br>
+              }<br>
+              <br>
+              let func = sayHi;    // (2) copiar<br>
+              
+              func(); // Hola          // (3) ejecuta la copia (funciona)!<br>
+              sayHi(); // Hola         // esto también funciona (por qué no lo haría)<br><br>
+            
+            </em></strong>
+
+            Por que en esta ocacion no usamos return?
+
+            Para empezar, una funcion es un valor, y es posible utilizarlo
+            a lo largo del codigo, y puede ser llamado multiples veces 
+            pero hay situaciones en las que el return no se utiliza. <br><br>
+
+            En el ejemplo anterior no hay "return" pero hay una explicacion simple: <br><br>
+
+            En este caso, el código funciona porque en JavaScript, las funciones son 
+            valores, lo que significa que puedes tratarlas como variables y 
+            asignarlas a otras variables, pasarlas como argumentos, o retornarlas desde otras funciones. <br><br>
+
+            Hay ocaciones en las que no es necesario usar reutrn como en acciones
+            en las que no esperas que devuelva algun valor. <br>
+
+            <strong>Cuando usamos el return?</strong> <br>
+            Usamos el "return" cuando esperamos que nuestra funcionos nos 
+            devuelva un resultado, que puede ser una operacion, una comparacion o
+            un calculo de los cuales necesitas que devuelva un valor;
+            <br><br>
+
+            function getPrecioConDescuento(precio, descuento) {<br>
+                return precio - (precio * (descuento / 100)); // Devuelve el precio con descuento aplicado<br>
+              }<br>
+              <br>
+              let precioFinal = getPrecioConDescuento(100, 20); // 100 - 20% = 80<br>
+              console.log(precioFinal); // Imprime 80<br><br>
+              
+            Pero si solo son acciones que se refieren a solo mostrar informacion 
+            con un alert(), usar la consola o mandar datos a un servidor no es necesario 
+            que utilicemos el return ya que es una accion que se da sin necedad de retornar 
+            un valor para su uso mas adelante, adenas de que como accione tambien es posible 
+            modificar el DOM de el codigo. <br><br>
+
+            <em><span>Las funciones son valores y como tales podemos 
+                usarlas como variables por eso la exprecion siguiente es valida:
+            </span></em><br><br>
+            <em>Una variable decclarada funcion...</em><br>
+            let sayHi = function() {<br>
+                alert( "Hola" );<br>
+              };<br>
+            
+            <p>---------------------------------</p>
+
+            <h3>Declaracion de funcion vs Exprecion de funcion</h3>
+
+            Formulemos las principales diferencias entre Declaración y Expresión de Funciones. <br><br>
+
+            Primero, la sintaxis: cómo diferenciarlas en el código.<br><br>
+
+            Declaración de Función: una función, declarada como una instrucción separada, en el flujo de código principal.<br>
+            <br>
+            // Declaración de Función<br>
+            function sum(a, b) {<br>
+            return a + b;<br>
+            }<br><br>
+            Expresión de Función: una función, creada dentro de una expresión o dentro de otra construcción sintáctica. Aquí, la función es creada en el lado derecho de la “expresión de asignación” =:<br>
+            <br>
+            // Expresión de Función<br>
+            let sum = function(a, b) {<br>
+            return a + b;<br>
+            };<br><br>
+
+            <strong>¿Cuándo debo elegir la Declaración de Función frente a la Expresión de Función?<br><br></strong>
+            Como regla general, cuando necesitamos declarar una función, la primera que debemos considerar es la sintaxis de la Declaración de Función. Da más libertad en cómo organizar nuestro código, porque podemos llamar a tales funciones antes de que sean declaradas.<br>
+            <br>
+            También es un poco más fácil de buscar function f(…) {…} en el código comparado con let f = function(…) {…}. La Declaración de Función es más llamativa.<br>
+            <br>
+            …Pero si una Declaración de Función no nos conviene por alguna razón, o necesitamos declaración condicional (hemos visto un ejemplo), entonces se debe usar la Expresión de función.<br>
+            <br>
+
+            <p>---------------------------------</p>
+
+            <h3>Funciones Flecha, lo básico</h3>
+
+            Veamos un ejemplo concreto: <br><br>
+
+            let sum = (a, b) => a + b;<br>
+            <br>
+            /* Esta función de flecha es una forma más corta de:<br>
+            <br>
+            let sum = function(a, b) {<br>
+            return a + b;<br>
+            };<br>
+            */<br>
+            <br>
+            alert( sum(1, 2) ); // 3<br>
+
+            <h4>Funciones de flecha multilínea</h4>
+
+
+            A veces necesitamos una función más compleja, con múltiples expresiones 
+            o sentencias. En ese caso debemos encerrarlos entre llaves. La diferencia principal es que las llaves necesitan usar 
+            un return para devolver un valor (tal como lo hacen las funciones comunes). <br><br>
+
+        
+        
+            let sum = (a, b) => {  // la llave abre una función multilínea <br>
+                let result = a + b;<br>
+                return result; // si usamos llaves, entonces necesitamos un "return" explícito<br>
+              };<br>
+              <br>
+              alert( sum(1, 2) ); // 3<br><br>
+
+
+            <p>---------------------------------</p>
+
+              Fin de la leccion:
+              <a href="./ejFunciones.html" target="_blank" rel="noopener noreferrer">Ejercicios de funciones</a>
+
+              <br>
+            <em><strong>Es mejor que siga practicando con retos de este tipo para 
+                crear memoria de situacion y saber que hacer en casos como estos.
+            </strong></em>
+
+        </div>
+    </body>
+</html>

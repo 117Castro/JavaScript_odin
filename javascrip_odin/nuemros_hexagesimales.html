@@ -1,0 +1,249 @@
+<!DOCTYPE html>     
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HExagesimales</title> 
+        <link rel="stylesheet" href="./css/stylmate.css">
+        <link rel="website icon" type="png" href="">
+
+    </head>
+    <body>
+        <ul class="pag">
+            <il><a href="./index.html" target="_blank" rel="noopener noreferrer">index</a></il>
+            <il><a href="./mecanicavariable.html" target="_blank" rel="noopener noreferrer">variables</a></il>
+            <il><a href="./matematica.html" target="_blank" rel="noopener noreferrer">Matematica</a></il>
+            <il><a href="./nuemros.html" target="_blank" rel="noopener noreferrer">numeos</a></il>
+
+
+        </ul>
+
+        <div id="sala1">
+            <h1>Pagina de numeracion hexagesimal con JavaScript</h1>
+            <p>Ejercicios basicos de aritmetica-numerica en script</p>
+            <p>post: en un mismo scrip da error si repito varibles...
+            mas bien en todos los script de la pagina aplica.</p>
+            <br>
+            <p>ya tengo un solo desmadre con el menu superior, wow!!!!!</p>
+
+            <br>
+            en java se pueden aplicar diversos tipos de numeracion:
+            <br>
+
+            en JS la numeracion base es decimal de 10, pero si queremos trabajar con otro
+            tipo de numeracionpodemos hacer uso de .toString() para cambiar a la numeracion 
+            que sea de nuestra preferencia.
+            <br>
+
+            pasemos de numeracion decimal a binaria...
+            <p>numero 2345 a binario:</p>
+            <p id="bin"></p>
+            
+
+            probemos ahora con una numeracion diferente
+            <br>
+            numeracion octal 8 de 2345:
+            <p id="base8"></p>
+            numeracione hexadecimal 16 de 2345:
+            <p id="base16"></p>
+            numeracione de 2 a 36: 
+            <p id="base36"></p>
+        
+
+            <script>
+                let num1=2345;
+                let base2=num1.toString(2);
+                //nuemracion en binario 0 y 1
+                document.getElementById("bin").innerHTML=base2;
+
+
+                let base8=num1.toString(8);
+                let base16=num1.toString(16);
+                let base36=num1.toString(36);
+                //otro tipo de numeracion
+                document.getElementById("base8").innerHTML=base8;
+                document.getElementById("base16").innerHTML=base16;
+                document.getElementById("base36").innerHTML=base36;
+
+
+
+            </script>
+
+            
+            usemos el new number()
+            <br>
+            esto unicamente visualiza si es un literal numero u obgect.
+            <br>aqui solo me muestra el numero pq no tiene el typeof, pero ya es un obgeto
+            <p id="ne"></p>
+            y aqui imprimire que tipo es con el typeof
+            <p id="ne2"></p>
+            <script>
+                let jh=234;
+                let ne1= new Number(jh);
+                document.getElementById("ne").innerHTML=ne1;
+                document.getElementById("ne2").innerHTML= typeof ne1;
+                console.log(typeof ne1);//aqui pruebo imprimir con consola
+
+
+            </script>
+            
+        <!-- //es entendible, aunque gpt dice que use mejor el === pq es mas seguro eficiente. -->
+        uso de == y ===
+        <p id="iguales"></p>
+        <p id="igualess"></p>
+
+        <p id="igualesss"></p>
+
+        ahora veamos que pasa si es estricto
+        <p id="igual"></p>
+        <p id="iguall"></p>
+        <p id="igualll"></p>
+        <p id="iguald"></p>
+
+        
+        <script>
+            let a=24;
+            let s="24";
+            let r="5";
+            let p="palabra";
+            let y=24;
+
+            document.getElementById("iguales").innerHTML= "uso de 24=='5' " + (a==r);
+            document.getElementById("igualess").innerHTML= "uso de 24=='24' " + (a==s);
+            document.getElementById("igualesss").innerHTML= "uso de 24=='palabra' " + (a==p);
+
+            //uso ===
+            document.getElementById("igual").innerHTML= "uso de 24==='5' " + (a===r);
+            document.getElementById("iguall").innerHTML= "uso de 24==='24' " + (a===s);
+            document.getElementById("igualll").innerHTML= "uso de 24==='palabra' " + (a===p);
+            document.getElementById("iguald").innerHTML= "uso de 24===24 " + (a===y);
+
+
+
+        </script>
+        
+        prueba de acortado de decimales usando .tofixed(), y como la imprecion que se 
+        obtiene es de tipo string, para pasarla a number utilizare parcefloat()
+
+        impresion de decimal 1.789123 pero esta en strings
+        <p id="decimales2"></p>
+        con .typeof
+        <p id="decimales21"></p>
+        para arreglar eso usaremos el parsefloat() y se convertira en number
+
+        <p id="stanum"></p>
+        
+        <script>
+            //usare el declarador const
+            const numerodecimal=1.789123;//no olvides poner el punto decimal, yo lo hice...
+            const converdeci=numerodecimal .toFixed(2)
+
+            document.getElementById("decimales2").innerHTML=converdeci;
+            document.getElementById("decimales21").innerHTML=typeof converdeci;
+
+            //pasandolo de string a number
+            const pass= parseFloat(converdeci);
+            document.getElementById("stanum").innerHTML= "paso de string a: "+ pass+" " + typeof pass;
+
+            
+        </script>
+        
+        <!-- ya se como convertir string a number -->
+        <br>
+        <p>
+        ahora para arreglar el concatenado de cadenal y numbers + strings usamos el 
+        number() o tambien el parseFloat() en la operacion y pasamos de string a number 
+        cualquier cadena numerica...</p>
+            la formula es esta: convert= number("24") + 24;
+        <p id="jkl"></p>
+
+        <script>
+            let hjd= "24";
+            let nuj= 24;
+
+            let convert= Number(hjd) + 24;
+            document.getElementById("jkl").innerHTML=convert;
+        </script>
+        
+
+        a mira algo nuevo si declaro variables y esas variables las junto 
+        con asignadores con operandos, realizan la operacion, pero me parecen muy 
+        burduosos... let el= (yo += tu);es mucho lineado de codigo. para hacer una operacion
+        y estan el +=, -=, *=, /= y otros mas, como en los operandos que ya se conocen.
+        
+        <br>let yo=4;
+        let tu= 2;
+        let el= (yo += tu); esto es como decir: (el= yo= yo = tu)// el resultado sera 6
+        <p id="jhg"></p>
+
+        <script>
+            let yo=4;
+            let tu= 2;
+            let el= (yo += tu);
+            document.getElementById("jhg").innerHTML=el;
+        </script>
+
+
+        <p>Operadores de asignacion: </p>
+        estos operadores pueden ser ===, ==, !==, <=, >=, <,> <br>
+
+        probemos que son <br>
+        los de comparacion los conocemos ya, uno es estricto y el otro convierte un elemento en otro para comparar. <br>
+        <br>
+        !== este, en lugar de comprobar si son iguales, lo que busca
+        es ver que NO sean iguales, si son iguales dara false, y si son iguales dara true. <br>
+        <br>
+        < mer que, busca saber si la variable left es menor que la right. <br>
+        > el mayor que, bosca lo contrario, que el left sea mayor que el right. <br>
+        <br>
+        <= menor o igual que, busca que el left sea menor o igual a right, para que se cumpla. 
+        <br>
+        >= mayor o igual que, lo contrario, que sea mayor o igual que el right. <br>
+        <br>
+
+        <p class="mensaje">
+        Continuacion con practicas de matematicas, lo genial es que lo entiendo, no es cencillo, pero tengo mis trucos para meejorar mi forma de aprender.
+        </p>
+
+        <br>
+        llamemos a esto la suma de cadenas numericas <br>
+        Quiero probar algo interesante que acabo de descubrir con el signo + en la 
+        parte de declaracion de cadenas con contenido en forma de string, y la verdad esto es como usar number()
+        pero alijera el proceso tando de convertir string a number asi como el hacer las formulasmatematicas.
+        este seria un ejemplo de convercion y operacion matematica.  <br>
+        let val= "4";<br>
+            let vol= "5";<br>
+            console.log(+val + +vol);
+        <br>
+        
+
+        <p id="nu1"></p>
+
+        <script>
+            let val= "4";
+            let vol= "5";
+
+            document.getElementById ("nu1").innerHTML=+val + +vol ;
+        </script>
+
+        <p class="mensaje">
+        <br>
+        <br>'Solo recordar que typeof(define el tipo de variable),
+        <br>.tofixed(2) (convierte al numero de decimales que queramos ver 1.25 ejm),
+        <br>parsefloat() number() son para convertir las string en number... y 
+        <br> .tostring()(convierte la numeracion decimal en cualquiera que queramos del 2 al 36)'
+        <br>, new number() convierte los numeros en objetos...
+        <br>
+        </p>
+        
+
+
+
+
+
+
+
+        </div>
+    </body>
+</html>
